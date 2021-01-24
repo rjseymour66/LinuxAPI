@@ -1,0 +1,6 @@
+fd1 is opened with rw privileges. it is spot 1 on the open file table
+fd2 is a dup of fd1. It is row 1 on the open file table too
+fd3 is opened with rw privileges. It is row 2 on the open file table
+'Hello,' is writtent to fd1. fd1 and fd2 now have an offset of 6
+' world' is written to fd2. that means that the offset is 12
+offset for fd1 and fd2 is now 0
