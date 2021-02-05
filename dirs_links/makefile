@@ -1,10 +1,10 @@
-objects = t_unlink.o ../lib/libtlpi.a
+objects = t_realpath.o ../lib/libtlpi.a
 
-t_unlink : $(objects)
-	gcc -o t_unlink $(objects) 
+t_realpath : $(objects)
+	gcc -o t_realpath $(objects) -Wall -g -Wextra -std=c99
 
-t_unlink.o : t_unlink.c ../include/tlpi_hdr.h
-	gcc -I ../include -c t_unlink.c
+t_realpath.o : t_realpath.c ../include/tlpi_hdr.h
+	gcc -I ../include -c t_realpath.c -Wall -g -Wextra -std=c99
 
 .PHONY : orm
 orm :
@@ -12,4 +12,4 @@ orm :
 
 .PHONY : clean
 clean : 
-	-rm t_unlink t_unlink.o
+	-rm t_realpath t_realpath.o
